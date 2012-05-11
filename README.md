@@ -29,19 +29,18 @@ For a quick view, check this out:
 
 ``` javascript
 
-    (new Form(
-        $$('form').shift(),
-        {
-            postsubmit: function() {
-                alert('Form has been submitted.');
-            },
-            presubmit: function(callback) {
-                alert('Form is about to be submitted.');
-                callback();
-            }
+(new Form(
+    $$('form').shift(),
+    {
+        postsubmit: function() {
+            alert('Form has been submitted.');
+        },
+        presubmit: function(callback) {
+            alert('Form is about to be submitted.');
+            callback();
         }
-    ));
-
+    }
+));
 ````
 
 In this example, a `Form` instance is created which takes the single form on the
@@ -59,25 +58,24 @@ logging method), then you do have the flexibility here to do that.
 
 ``` javascript
 
-    (new SmartForm(
-        $$('form').shift(),
-        {
-            ajax: true,
-            callback: function(response) {
-                alert('Ajax response ready.');
-                log(response);
-            },
-            ghosts: true,
-            postsubmit: function() {
-                alert('Form has been submitted.');
-            },
-            presubmit: function(callback) {
-                alert('Form is about to be submitted.');
-                callback();
-            }
+(new SmartForm(
+    $$('form').shift(),
+    {
+        ajax: true,
+        callback: function(response) {
+            alert('Ajax response ready.');
+            log(response);
+        },
+        ghosts: true,
+        postsubmit: function() {
+            alert('Form has been submitted.');
+        },
+        presubmit: function(callback) {
+            alert('Form is about to be submitted.');
+            callback();
         }
-    ));
-
+    }
+));
 ```
 
 In this `SmartForm` example, the single form on the page is again that target of
