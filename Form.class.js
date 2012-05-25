@@ -125,7 +125,7 @@ var Form = new Class({
              */
             if (self.enabled) {
                 self.disable();
-                self.options.presubmit(function() {
+                self.options.presubmit.bind(self)(function() {
                     self.submit();
                     self.options.postsubmit();
                 });
