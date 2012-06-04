@@ -11,10 +11,11 @@ if (typeof Form === 'undefined') {
  * 
  * - <Ghost> placeholders
  * - Ajax submission
- * - Input value retrieval (used in ajax submission)
+ * - Input value retrieval (used in ajax submission and form validation)
  * 
  * @see     https://github.com/onassar/JS-Ghost
  * @see     https://github.com/onassar/JS-Ajax
+ * @see     https://github.com/onassar/JS-JSON-Validation
  * @author  Oliver Nassar <onassar@gmail.com>
  * @extends Form
  */
@@ -93,9 +94,8 @@ var SmartForm = new Class({
     /**
      * getInputs
      * 
-     * @notes  doesn't support select node's which allow multiple selections
+     * @notes  Doesn't support select node's which allow multiple selections
      * @public
-     * @param  boolean format
      * @return [HTMLElement]
      */
     getInputs: function() {
